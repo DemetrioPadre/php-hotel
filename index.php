@@ -15,7 +15,7 @@ include_once "./result.php"
 </head>
 
 <body>
-    <table class="table">
+    <table class="table mx-5 mt-5 border">
         <thead>
             <tr>
                 <th class="scope">Name</th>
@@ -30,10 +30,10 @@ include_once "./result.php"
             <?php foreach($hotels as $hotel) : ?>
             <tr>
                 <td><?php echo $hotel["name"] ?> </td>
-                <td><?php echo $hotel["description"] ?></td>
-                <td><?php echo $hotel["parking"] ?></td>
-                <td><?php echo $hotel["vote"] ?></td>
-                <td><?php  echo $hotel["distance_to_center"] ?></td>
+                <td><?php echo $hotel["description"]?> </td>
+                <td><?php echo $hotel['parking'] ? 'si':'no' ?> </td>
+                <td><?php echo $hotel["vote"] ?> </td>
+                <td><?php  echo $hotel["distance_to_center"] ?> </td>
 
             </tr>
             <?php endforeach ?>
