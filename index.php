@@ -18,22 +18,22 @@ include_once "./result.php"
     <table class="table mx-5 mt-5 border">
         <thead>
             <tr>
-                <th class="scope">Name</th>
-                <th class="scope">Description</th>
-                <th class="scope">Parking</th>
-                <th class="scope">Vote</th>
-                <th class="scope">Distance to Center</th>
+                <th class="scope border">Name</th>
+                <th class="scope border">Description</th>
+                <th class="scope border">Parking</th>
+                <th class="scope border">Vote</th>
+                <th class="scope border">Distance to Center</th>
             </tr>
         </thead>
 
-        <tbody>
+        <tbody class="border">
             <?php foreach($hotels as $hotel) : ?>
-            <tr>
-                <td><?php echo $hotel["name"] ?> </td>
-                <td><?php echo $hotel["description"]?> </td>
-                <td><?php echo $hotel['parking'] ? 'si':'no' ?> </td>
-                <td><?php echo $hotel["vote"] ?> </td>
-                <td><?php  echo $hotel["distance_to_center"] ?> </td>
+            <tr class="">
+                <td class="border"><?php echo $hotel["name"] ?> </td>
+                <td class="border"><?php echo $hotel["description"]?> </td>
+                <td class="border"><?php echo $hotel['parking'] ? 'yes':'no' ?> </td>
+                <td class="border"><?php echo $hotel["vote"] ?> </td>
+                <td class="border"><?php  echo $hotel["distance_to_center"] ." " ."km"?> </td>
 
             </tr>
             <?php endforeach ?>
