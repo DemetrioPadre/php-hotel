@@ -1,5 +1,5 @@
 <?php 
-include_once ('./result.php')
+include_once "./result.php"
 ?>
 
 
@@ -25,6 +25,20 @@ include_once ('./result.php')
                 <th class="scope">Distance to Center</th>
             </tr>
         </thead>
+
+        <tbody>
+            <?php foreach($hotels as $hotel) : ?>
+            <tr>
+                <td><?php echo $hotel["name"] ?> </td>
+                <td><?php echo $hotel["description"] ?></td>
+                <td><?php echo $hotel["parking"] ?></td>
+                <td><?php echo $hotel["vote"] ?></td>
+                <td><?php  echo $hotel["distance_to_center"] ?></td>
+
+            </tr>
+            <?php endforeach ?>
+
+        </tbody>
 
     </table>
 
