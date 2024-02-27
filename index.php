@@ -17,12 +17,16 @@ include_once "./result.php"
 
 <body>
     <div class="container mt-5">
+        <?php
+        echo 'cuai';
+        echo $filter_parking;
 
+        ?>
 
 
         <div class="card mt-5">
             <div class="card-body">
-                <form action="" method="GET">
+                <form action="index.php" method="GET">
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" name="check-parking" id="check-parking"
                             <?= $filter_parking ? 'checked' : '' ?>>
