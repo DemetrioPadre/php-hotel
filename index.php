@@ -1,5 +1,6 @@
 <?php
-include_once "./result.php"
+
+include_once __DIR__ ."/rules.php";
     ?>
 
 
@@ -17,13 +18,6 @@ include_once "./result.php"
 
 <body>
     <div class="container mt-5">
-        <?php
-        echo 'cuai';
-        echo $filter_parking;
-
-        ?>
-
-
         <div class="card mt-5">
             <div class="card-body">
                 <form action="index.php" method="GET">
@@ -37,11 +31,12 @@ include_once "./result.php"
 
                     <div class="mb-3">
                         <label for="filter-vote" class="form-label">Voto</label>
-                        <input type="number" name="filter-vote" class="form-control" id="filter-vote" min="1" max="5">
+                        <input type="number" name="filter-vote" class="form-control" id="filter-vote" min="1" max="5"
+                            <?= $filter_vote ? 'checked' : '' ?>>
                     </div>
 
                     <button class="btn btn-primary mx-2">submit</button>
-                    <input type="reset" class="btn btn-warning mx-2" value="reset">riavvia</input>
+                    <input type="reset" class="btn btn-warning mx-2" value="reset"> </input>
 
 
                 </form>
